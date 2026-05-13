@@ -1,0 +1,18 @@
+ERROR - 2026-05-13 07:04:29 --> Error connecting to the database: Error: Class "SQLite3" not found in /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/SQLite3/Connection.php:111
+Stack trace:
+#0 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect()
+#1 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/SQLite3/Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query()
+#4 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists()
+#6 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Database/MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Commands/Database/Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest()
+#8 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/CLI/SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Commands/Database/Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked()
+#10 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run()
+#11 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run()
+#12 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/system/Boot.php(166): CodeIgniter\Boot::runCommand()
+#14 /home/zenoxys/S4/Systeme_d_Information/Rh_interne/spark(87): CodeIgniter\Boot::bootSpark()
+#15 {main}
