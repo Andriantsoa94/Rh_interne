@@ -6,28 +6,28 @@ Ce document détaille toutes les tâches nécessaires pour mener à bien le proj
 
 ## Phase 1 : Initialisation du Projet et Base de Données (20 min)
 
-- [ ] **Configuration de l'environnement**
-    - [ ] Configurer le fichier `.env` pour utiliser la base de données SQLite.
-    - [ ] S'assurer que le framework CodeIgniter 4 est correctement installé.
+- [x] **Configuration de l'environnement**
+    - [x] Configurer le fichier `.env` pour utiliser la base de données SQLite.
+    - [x] S'assurer que le framework CodeIgniter 4 est correctement installé.
 
-- [ ] **Migrations de la Base de Données**
-    - [ ] Créer le fichier de migration pour la table `departements`.
-    - [ ] Créer le fichier de migration pour la table `types_conge`.
-    - [ ] Créer le fichier de migration pour la table `employes`.
-    - [ ] Créer le fichier de migration pour la table `soldes`.
-    - [ ] Créer le fichier de migration pour la table `conges`.
-    - [ ] Exécuter la commande `php spark migrate` pour créer les tables.
+- [x] **Migrations de la Base de Données**
+    - [x] Créer le fichier de migration pour la table `departements`.
+    - [x] Créer le fichier de migration pour la table `types_conge`.
+    - [x] Créer le fichier de migration pour la table `employes`.
+    - [x] Créer le fichier de migration pour la table `soldes`.
+    - [x] Créer le fichier de migration pour la table `conges`.
+    - [x] Exécuter la commande `php spark migrate` pour créer les tables.
 
-- [ ] **Seeders (Données de test)**
-    - [ ] Créer un seeder principal `DatabaseSeeder`.
-    - [ ] Dans le seeder, ajouter :
-        - [ ] 1 utilisateur `admin`.
-        - [ ] 2 utilisateurs `employe`.
-        - [ ] 1 utilisateur `rh`.
-        - [ ] 2 `départements`.
-        - [ ] 3 `types_conge` (ex: Payé, Maladie, Spécial).
-        - [ ] Initialiser les soldes pour chaque employé pour chaque type de congé déductible.
-    - [ ] Exécuter `php spark db:seed` pour peupler la base de données.
+- [x] **Seeders (Données de test)**
+    - [x] Créer un seeder principal `DatabaseSeeder`.
+    - [x] Dans le seeder, ajouter :
+        - [x] 1 utilisateur `admin`.
+        - [x] 2 utilisateurs `employe`.
+        - [x] 1 utilisateur `rh`.
+        - [x] 2 `départements`.
+        - [x] 3 `types_conge` (ex: Payé, Maladie, Spécial).
+        - [x] Initialiser les soldes pour chaque employé pour chaque type de congé déductible.
+    - [x] Exécuter `php spark db:seed` pour peupler la base de données.
 
 - [ ] **Routing Initial**
     - [ ] Définir les groupes de routes `/employe`, `/rh`, `/admin`.
