@@ -16,7 +16,10 @@ $routes->group('employe', ['filter' => 'auth:employe'], static function ($routes
 	$routes->get('dashboard', 'EmployeController::dashboard');
 	$routes->get('conges', 'EmployeController::index');
 	$routes->get('conges/create', 'EmployeController::create');
+	$routes->post('conges', 'EmployeController::store');
+	$routes->post('conges/(:num)/cancel', 'EmployeController::cancel/$1');
 	$routes->get('profil', 'EmployeController::profil');
+	$routes->post('profil', 'EmployeController::updateProfil');
 });
 
 $routes->group('rh', ['filter' => 'auth:rh'], static function ($routes) {

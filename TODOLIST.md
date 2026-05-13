@@ -29,9 +29,9 @@ Ce document détaille toutes les tâches nécessaires pour mener à bien le proj
         - [x] Initialiser les soldes pour chaque employé pour chaque type de congé déductible.
     - [x] Exécuter `php spark db:seed` pour peupler la base de données.
 
-- [ ] **Routing Initial**
-    - [ ] Définir les groupes de routes `/employe`, `/rh`, `/admin`.
-    - [ ] Créer des contrôleurs squelettes (`EmployeController`, `RhController`, `AdminController`, `AuthController`).
+- [x] **Routing Initial**
+    - [x] Définir les groupes de routes `/employe`, `/rh`, `/admin`.
+    - [x] Créer des contrôleurs squelettes (`EmployeController`, `RhController`, `AdminController`, `AuthController`).
 
 ---
 
