@@ -632,3 +632,53 @@ in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
  9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
 10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
 11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+CRITICAL - 2026-05-13 08:01:03 --> CodeIgniter\Filters\Exceptions\FilterException: "forcehttps" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in SYSTEMPATH/Filters/Filters.php on line 402.
+ 1 SYSTEMPATH/Filters/Filters.php(402): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(319): CodeIgniter\Filters\Filters->getRequiredFilters()
+ 3 SYSTEMPATH/Filters/Filters.php(353): CodeIgniter\Filters\Filters->getRequiredClasses()
+ 4 SYSTEMPATH/CodeIgniter.php(373): CodeIgniter\Filters\Filters->runRequired()
+ 5 SYSTEMPATH/CodeIgniter.php(333): CodeIgniter\CodeIgniter->runRequiredBeforeFilters()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-13 08:02:29 --> CodeIgniter\Filters\Exceptions\FilterException: "forcehttps" filter must have a matching alias defined.
+[Method: GET, Route: login]
+in SYSTEMPATH/Filters/Filters.php on line 402.
+ 1 SYSTEMPATH/Filters/Filters.php(402): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(319): CodeIgniter\Filters\Filters->getRequiredFilters()
+ 3 SYSTEMPATH/Filters/Filters.php(353): CodeIgniter\Filters\Filters->getRequiredClasses()
+ 4 SYSTEMPATH/CodeIgniter.php(373): CodeIgniter\Filters\Filters->runRequired()
+ 5 SYSTEMPATH/CodeIgniter.php(333): CodeIgniter\CodeIgniter->runRequiredBeforeFilters()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-13 08:04:44 --> CodeIgniter\Filters\Exceptions\FilterException: "forcehttps" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in SYSTEMPATH/Filters/Filters.php on line 402.
+ 1 SYSTEMPATH/Filters/Filters.php(402): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(319): CodeIgniter\Filters\Filters->getRequiredFilters()
+ 3 SYSTEMPATH/Filters/Filters.php(353): CodeIgniter\Filters\Filters->getRequiredClasses()
+ 4 SYSTEMPATH/CodeIgniter.php(373): CodeIgniter\Filters\Filters->runRequired()
+ 5 SYSTEMPATH/CodeIgniter.php(333): CodeIgniter\CodeIgniter->runRequiredBeforeFilters()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-05-13 08:06:58 --> CodeIgniter\Filters\Exceptions\FilterException: "forcehttps" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in SYSTEMPATH/Filters/Filters.php on line 402.
+ 1 SYSTEMPATH/Filters/Filters.php(402): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias()
+ 2 SYSTEMPATH/Filters/Filters.php(319): CodeIgniter\Filters\Filters->getRequiredFilters()
+ 3 SYSTEMPATH/Filters/Filters.php(353): CodeIgniter\Filters\Filters->getRequiredClasses()
+ 4 SYSTEMPATH/CodeIgniter.php(373): CodeIgniter\Filters\Filters->runRequired()
+ 5 SYSTEMPATH/CodeIgniter.php(333): CodeIgniter\CodeIgniter->runRequiredBeforeFilters()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+DEBUG - 2026-05-13 08:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-13 08:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-13 08:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-13 08:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-13 08:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-05-13 08:12:52 --> CSRF token verified.
