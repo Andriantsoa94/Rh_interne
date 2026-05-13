@@ -7,29 +7,22 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-$routes->get('login', 'AuthController::login');
-$routes->post('login', 'AuthController::attempt');
-$routes->get('logout', 'AuthController::logout');
+// Routes d'authentification
+$routes->get('/login', 'AuthController::login');
+$routes->post('/login', 'AuthController::attempt');
+$routes->get('/logout', 'AuthController::logout');
 
-$routes->group('employe', ['filter' => 'auth:employe'], static function ($routes) {
-	$routes->get('/', 'EmployeController::dashboard');
-	$routes->get('dashboard', 'EmployeController::dashboard');
-	$routes->get('conges', 'EmployeController::index');
-	$routes->get('conges/create', 'EmployeController::create');
-	$routes->get('profil', 'EmployeController::profil');
+// Groupe pour les employés
+$routes->group('employe', ['filter' => 'auth:employe,rh,admin'], static function ($routes) {
+    $routes->get('/', 'EmployeController::index');
 });
 
-$routes->group('rh', ['filter' => 'auth:rh'], static function ($routes) {
-	$routes->get('/', 'RhController::dashboard');
-	$routes->get('dashboard', 'RhController::dashboard');
-	$routes->get('demandes', 'RhController::index');
+// Groupe pour les RH
+$routes->group('rh', ['filter' => 'auth:rh,admin'], static function ($routes) {
+    $routes->get('/', 'RhController::index');
 });
 
+// Groupe pour les administrateurs
 $routes->group('admin', ['filter' => 'auth:admin'], static function ($routes) {
-	$routes->get('/', 'AdminController::dashboard');
-	$routes->get('dashboard', 'AdminController::dashboard');
-	$routes->get('employes', 'AdminController::employes');
-	$routes->get('departements', 'AdminController::departements');
-	$routes->get('types-conge', 'AdminController::typesConges');
-	$routes->get('soldes', 'AdminController::soldes');
+    $routes->get('/', 'AdminController::index');
 });

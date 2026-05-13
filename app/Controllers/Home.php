@@ -4,8 +4,22 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index(): \CodeIgniter\HTTP\RedirectResponse
     {
-        return view('welcome_message');
+        if (session()->get('isLoggedIn')) {
+            $role = session()->get('role');
+            switch ($role) {
+                case 'admin':
+                    return redirect()->to('/admin');
+                case 'rh':
+                    return redirect()->to('/rh');
+                case 'employe':
+                    return redirect()->to('/employe');
+                default:
+                    return redirect()->to('/login');
+            }
+        }
+
+        return redirect()->to('/login');
     }
 }
