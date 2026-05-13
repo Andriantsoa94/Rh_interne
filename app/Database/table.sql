@@ -1,59 +1,61 @@
-create database rh_db;
-use rh_db;
+-- SQLite compatible schema
+-- Créer la base de données SQLite
+-- Pas besoin de "CREATE DATABASE" pour SQLite
 
 -- Table: departements
 CREATE TABLE departements (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom TEXT NOT NULL,
     description TEXT
 );
 
 -- Table: types_conge
 CREATE TABLE types_conge (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    libelle VARCHAR(100) NOT NULL,
-    jours_annuels INT NOT NULL,
-    deductible BOOLEAN DEFAULT 0
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    libelle TEXT NOT NULL,
+    jours_annuels INTEGER NOT NULL,
+    deductible INTEGER DEFAULT 0
 );
 
-create table employes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100),
-    prenom VARCHAR(50)
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(100),
-    role VARCHAR(),
-    departement_id INT,
-    date_embauche DATE,
-    actif BOOLEAN DEFAULT 1,
-    CONSTRAINT fk_employes_departements FOREIGN KEY (departement_id) REFERENCES departements(id)
+-- Table: employes
+CREATE TABLE employes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom TEXT,
+    prenom TEXT,
+    email TEXT UNIQUE,
+    password TEXT,
+    role TEXT,
+    departement_id INTEGER,
+    date_embauche TEXT,
+    actif INTEGER DEFAULT 1,
+    FOREIGN KEY (departement_id) REFERENCES departements(id)
 );
 
 -- Table: soldes
 CREATE TABLE soldes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    employe_id INT NOT NULL,
-    type_conge_id INT NOT NULL,
-    annee YEAR NOT NULL,
-    jours_attribues INT NOT NULL,
-    jours_pris INT NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    employe_id INTEGER NOT NULL,
+    type_conge_id INTEGER NOT NULL,
+    annee TEXT NOT NULL,
+    jours_attribues INTEGER NOT NULL,
+    jours_pris INTEGER NOT NULL,
     FOREIGN KEY (employe_id) REFERENCES employes(id),
     FOREIGN KEY (type_conge_id) REFERENCES types_conge(id)
 );
 
 -- Table: conges
 CREATE TABLE conges (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    employe_id INT NOT NULL,
-    type_conge_id INT NOT NULL,
-    date_debut DATE NOT NULL,
-    date_fin DATE NOT NULL,
-    nb_jours INT NOT NULL,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    employe_id INTEGER NOT NULL,
+    type_conge_id INTEGER NOT NULL,
+    date_debut TEXT NOT NULL,
+    date_fin TEXT NOT NULL,
+    nb_jours INTEGER NOT NULL,
     motif TEXT,
-    statut VARCHAR(50),
+    statut TEXT,
     commentaire_rh TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    traite_par INT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+    traite_par INTEGER,
     FOREIGN KEY (employe_id) REFERENCES employes(id),
     FOREIGN KEY (type_conge_id) REFERENCES types_conge(id),
     FOREIGN KEY (traite_par) REFERENCES employes(id)
